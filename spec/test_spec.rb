@@ -24,7 +24,7 @@ RSpec.describe Test do
   end
 
   context "when conditions are a scope and an attribute" do
-    let(:ransack) { Test.ransack(red: true, color: "green", m: :or) }
+    let(:ransack) { Test.ransack(red: true, color_cont: "green", m: :or) }
 
     it "supports :or combinator" do
       expect(ransack.base.combinator).to eq :or
